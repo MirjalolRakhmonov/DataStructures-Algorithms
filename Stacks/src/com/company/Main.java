@@ -1,8 +1,5 @@
 package com.company;
 
-import java.util.Scanner;
-import java.util.Stack;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -19,9 +16,19 @@ public class Main {
         while (!stack.empty())
             System.out.print(stack.pop()); */
 
-        String str="hello";
+        /*String str="hello";
          StringReverser reverser=new StringReverser();
          var result=reverser.reverse(str);
-        System.out.print(result);
+        System.out.print(result);*/
+
+        // Edge cases
+        // (
+        // (()
+        // (]
+        // )(
+        String expression=">1+2<";
+        ExpressionBalancer balancer=new ExpressionBalancer();
+        var solution=balancer.isBalanced(expression);
+        System.out.println(solution);
     }
 }
