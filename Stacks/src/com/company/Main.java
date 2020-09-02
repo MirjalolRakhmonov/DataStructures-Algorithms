@@ -26,7 +26,7 @@ public class Main {
         // (()
         // (]
         // )(
-        String expression=">1+2<";
+        String expression="{1+2<";
         ExpressionBalancer balancer=new ExpressionBalancer();
         var solution=balancer.isBalanced(expression);
         System.out.println(solution);

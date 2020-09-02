@@ -6,18 +6,30 @@ public class ExpressionBalancer {
     public boolean isBalanced(String str){
         Stack<Character> stack=new Stack<>();
         for (char ch : str.toCharArray()){
-            if (ch=='(' || ch=='[' || ch=='{' || ch=='<')
+            if (isLeftBracket(ch))
                 stack.push(ch);
-            if (ch==')' || ch==']' || ch=='}' || ch=='>') {
+            if (isRightBracket(ch)) {
                 if (stack.empty()) return false;
+
                 var top=stack.pop();
-                if (
-                        (ch==']' && top!='[')||
-                        (ch=='}' && top!='{')||
-                        (ch=='>' && top!='<')||
-                        (ch==')' && top!='(')) return false;
+                if (bracketsMatched(top,ch)) return false;
             }
         }
         return stack.empty();
+    }
+
+    private boolean isLeftBracket(char ch){
+        return ch=='(' || ch=='[' || ch=='{' || ch=='<';
+    }
+
+    private boolean isRightBracket(char ch){
+        return ch==')' || ch==']' || ch=='}' || ch=='>';
+    }
+
+    private boolean bracketsMatched(char left, char right){
+        return (right==']' && left!='[')||
+                (right=='}' && left!='{')||
+                (right=='>' && left!='<')||
+                (right==')' && left!='(');
     }
 }
