@@ -39,13 +39,26 @@ public class Main {
         System.out.println(newStack);
         System.out.println(newStack.peek()); */
 
-        StackList stack=new StackList();
+        /* StackList stack=new StackList();
         //System.out.println(stack.isEmpty());
         stack.push(12);
         stack.push(17);
         stack.push(20);
         stack.pop();
         System.out.println(stack.peek());
-        System.out.println(stack);
+        System.out.println(stack); */
+
+        TwoStacks ts=new TwoStacks(6);
+        ts.push1(5);
+        ts.push2(10);
+        ts.push1(22);
+        ts.push1(11);
+        ts.push2(7);
+        ts.push2(40);
+        System.out.println(ts);
+        System.out.println("Popped element from"
+                + " stack1 is " + ts.pop1());
+        System.out.println("Popped element from"
+                + " stack2 is " + ts.pop2());
     }
 }
