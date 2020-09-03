@@ -31,11 +31,21 @@ public class Main {
         ExpressionBalancer balancer=new ExpressionBalancer();
         var solution=balancer.isBalanced(expression);
         System.out.println(solution); */
-        Stack newStack=new Stack();
+        /*Stack newStack=new Stack();
         newStack.push(10);
         newStack.push(20);
         newStack.push(30);
+        newStack.pop();
         System.out.println(newStack);
-        System.out.println(newStack.peek());
+        System.out.println(newStack.peek()); */
+
+        StackList stack=new StackList();
+        //System.out.println(stack.isEmpty());
+        stack.push(12);
+        stack.push(17);
+        stack.push(20);
+        stack.pop();
+        System.out.println(stack.peek());
+        System.out.println(stack);
     }
 }
