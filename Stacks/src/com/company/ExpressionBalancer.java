@@ -3,16 +3,16 @@ package com.company;
 import java.util.Stack;
 
 public class ExpressionBalancer {
-    public boolean isBalanced(String str){
-        Stack<Character> stack=new Stack<>();
-        for (char ch : str.toCharArray()){
+    public boolean isBalanced(String input){
+        Stack<Character>stack=new Stack<>();
+        for (char ch : input.toCharArray()){
             if (isLeftBracket(ch))
                 stack.push(ch);
             if (isRightBracket(ch)) {
                 if (stack.empty()) return false;
 
                 var top=stack.pop();
-                if (bracketsMatched(top,ch)) return false;
+                if (bracketsMatched(top,ch)); return false;
             }
         }
         return stack.empty();
@@ -27,9 +27,9 @@ public class ExpressionBalancer {
     }
 
     private boolean bracketsMatched(char left, char right){
-        return (right==']' && left!='[')||
+        return (right==')' && left!='(')||
+                (right==']' && left!='[')||
                 (right=='}' && left!='{')||
-                (right=='>' && left!='<')||
-                (right==')' && left!='(');
+                (right=='>' && left!='<');
     }
 }

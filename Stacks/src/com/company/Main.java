@@ -26,9 +26,16 @@ public class Main {
         // (()
         // (]
         // )(
-        String expression="{1+2<";
+
+        /* String expression="{1+2{    ";
         ExpressionBalancer balancer=new ExpressionBalancer();
         var solution=balancer.isBalanced(expression);
-        System.out.println(solution);
+        System.out.println(solution); */
+        Stack newStack=new Stack();
+        newStack.push(10);
+        newStack.push(20);
+        newStack.push(30);
+        System.out.println(newStack);
+        System.out.println(newStack.peek());
     }
 }
