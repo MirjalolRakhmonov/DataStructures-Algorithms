@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8198e08-47cd-4218-a897-6727f023efd5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Stacks/out/production/Stacks/com/company/ExpressionBalancer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Stacks/out/production/Stacks/com/company/ExpressionBalancer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Stacks/out/production/Stacks/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Stacks/out/production/Stacks/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Stacks/src/com/company/ExpressionBalancer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Stacks/src/com/company/ExpressionBalancer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Stacks/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Stacks/src/com/company/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
