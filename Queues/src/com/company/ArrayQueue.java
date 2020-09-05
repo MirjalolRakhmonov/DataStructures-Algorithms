@@ -16,7 +16,8 @@ public class ArrayQueue {
         if (count== items.length)
             throw new IllegalStateException();
 
-        items[rear++]=item;
+        items[rear]=item;
+        rear=(rear+1)%items.length;
         count++;
     }
 
@@ -25,20 +26,25 @@ public class ArrayQueue {
             throw new IllegalStateException();
 
         //--count;
-        return items[front++];
+        var item= items[front];
+        items[front]=0;
+        front=(front+1)%items.length;
+        count--;
+        return item;
     }
 
     @Override
     public String toString(){
-        var context=Arrays.copyOfRange(items, front, count);
-        return Arrays.toString(context);
+        return Arrays.toString(items);
+        //var context=Arrays.copyOfRange(items, front, count);
+        //return Arrays.toString(context);
     }
 
     public int peek(){
         if (count==0)
             throw new IllegalStateException();
 
-        return items[front +1];
+        return items[front ++];
     }
 
     public boolean isEmpty(){
