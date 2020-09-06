@@ -14,18 +14,13 @@ public class Main {
         reverse(queue);
         System.out.println(queue); */
 
-        ArrayQueue queue=new ArrayQueue(5);
+        StackQueue queue=new StackQueue();
         queue.enqueue(10);
         queue.enqueue(20);
         queue.enqueue(30);
-        queue.dequeue();
-        var front=queue.dequeue();
-        queue.enqueue(40);
-        queue.enqueue(50);
-        queue.enqueue(60);
-        queue.enqueue(70);
-        System.out.println(front);
-        System.out.println(queue);
+        System.out.println(queue.peek());
+        //var front=queue.dequeue();
+        //System.out.println(front);
     }
 
     public static void reverse(Queue<Integer>queue){
