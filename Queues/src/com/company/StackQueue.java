@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class StackQueue {
     Stack<Integer> stack1=new Stack<>();  // for enqueue method
-    Stack<Integer> stack2=new Stack<>();  // for dequeue emthod
+    Stack<Integer> stack2=new Stack<>();  // for dequeue method
 
     public void enqueue(int item){
         stack1.push(item);
