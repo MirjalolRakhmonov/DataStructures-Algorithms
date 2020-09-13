@@ -12,6 +12,17 @@ public class ArrayQueue {
     private int front;
     private int rear;
 
+    /*public void enqueue(int element){
+        items[rear++]=element;
+        count++;
+    }*/
+
+    /*public int dequeue(){
+        var item=items[front];
+        items[front++]=0;
+        return item;
+    }*/
+
     public void enqueue(int item){
         if (count== items.length)
             throw new IllegalStateException();
