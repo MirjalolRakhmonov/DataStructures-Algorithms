@@ -31,9 +31,7 @@ public class PriorityQueue {
 
     public int shiftItemsToInsert(int item){
         int i;
-        // shifting items
-        for (i=count-1; i>=0; i--){ // why count-1? if we`ve 5 items , index of last item=4;
-            // in each iteration, we should get the item at current index
+        for (i=count-1; i>=0; i--){
             if (items[i]>item)
                 items[i+1]=items[i];
             else
