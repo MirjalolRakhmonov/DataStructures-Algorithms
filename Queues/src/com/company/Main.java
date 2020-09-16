@@ -8,8 +8,7 @@ import java.util.Stack;
 public class Main {
 
     public static void main(String[] args) {
-        queue=new LinkedList<>();
-        //Queue<Integer>queue=new ArrayDeque<>();
+        /*queue=new LinkedList<>();
         queue.add(10);
         queue.add(20);
         queue.add(30);
@@ -18,7 +17,7 @@ public class Main {
 
         int k =3;
         reversingFirstKitemsFromQueue(k);
-        Print();
+        Print(); */
 
         /*StackQueue queue=new StackQueue();
         queue.enqueue(10);
@@ -37,6 +36,12 @@ public class Main {
         System.out.println(queue);
         while (!queue.isEmpty())
             System.out.println(queue.remove()); */
+
+        LinkedListQueue queue=new LinkedListQueue();
+        queue.enqueue(1);
+        queue.enqueue(2);
+        queue.enqueue(3);
+        System.out.println(queue);
     }
 
     public static void reverse(Queue<Integer>queue){
