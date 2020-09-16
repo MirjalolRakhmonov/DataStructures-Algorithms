@@ -1,9 +1,6 @@
 package com.company;
 
-import java.util.ArrayDeque;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
+import java.util.*;
 
 public class Main {
 
@@ -41,6 +38,7 @@ public class Main {
         queue.enqueue(1);
         queue.enqueue(2);
         queue.enqueue(3);
+        queue.dequeue();
         System.out.println(queue);
     }
 
