@@ -11,7 +11,7 @@ public class PriorityQueue {
             throw new IllegalStateException();
 
         // we have to iterate this array from the end to beginning
-        /* int i;
+        int i;
         // shifting items
         for (i=count-1; i>=0; i--){ // why count-1? if we`ve 5 items , index of last item=4;
             // in each iteration, we should get the item at current index
@@ -19,25 +19,13 @@ public class PriorityQueue {
             items[i+1]=items[i];
             else
                 break;
-        } // this for loop is for shifting items  */
-        var i =shiftItemsToInsert(item);
-        items[i]=item;
+        } // this for loop is for shifting items
+        items[i+1]=item;
         count++;
     }
 
     public boolean isFull(){
         return count==items.length;
-    }
-
-    public int shiftItemsToInsert(int item){
-        int i;
-        for (i=count-1; i>=0; i--){
-            if (items[i]>item)
-                items[i+1]=items[i];
-            else
-                break;
-        }
-        return i+1;
     }
 
     public int remove(){
