@@ -6,14 +6,16 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // a green apple
-        // a=2
-        //  =2
-        // g=1
-        CharFinder finder=new CharFinder();
-        var ch = finder.findFirstNonRepeatingChar("a green apple");
-        var chars=finder.getFirstRepeatedChar("green apple");
-        System.out.println(chars);
+        Map<Integer, String>map=new HashMap<>();
+        map.put(123456, "Mirjalol");
+        // items[1]="Mirjalol"
+        // 100
+        // 0-99
+        System.out.println(hash(123456));
+    }
+
+    public static int hash(int number){
+        return number % 100;
     }
 
 }
