@@ -16,30 +16,13 @@ public class Main {
         reversingFirstKitemsFromQueue(k);
         Print(); */
 
-        /*StackQueue queue=new StackQueue();
-        queue.enqueue(10);
-        queue.enqueue(20);
-        queue.enqueue(30);
-        System.out.println(queue.peek());
-        var front=queue.dequeue();
-        System.out.println(front); */
-
-        /*PriorityQueue queue=new PriorityQueue();
-        queue.add(5);
-        queue.add(2);
-        queue.add(4);
-        queue.add(3);
-        queue.add(1);
-        System.out.println(queue);
-        while (!queue.isEmpty())
-            System.out.println(queue.remove()); */
-
-        LinkedListQueue queue=new LinkedListQueue();
-        queue.enqueue(1);
-        queue.enqueue(2);
-        queue.enqueue(3);
-        queue.dequeue();
-        System.out.println(queue);
+        // a green apple
+        // a=2
+        //  =2
+        // g=1
+        CharFinder finder=new CharFinder();
+        var ch = finder.findFirstNonRepeatingChar("a green apple");
+        System.out.println(ch);
     }
 
     public static void reverse(Queue<Integer>queue){
