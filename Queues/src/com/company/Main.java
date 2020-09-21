@@ -46,6 +46,7 @@ public class Main {
         table.put(8,"B"); // 8/5=3
         table.put(11,"B"); // 11/5=1
         table.put(6,"A+");
+        table.remove(6);
         System.out.println(table.get(6));
     }
 
