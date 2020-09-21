@@ -14,7 +14,7 @@ public class Main {
 
         int k =3;
         reversingFirstKitemsFromQueue(k);
-        Print(); */
+        Print();
 
         // a green apple
         // a=2
@@ -30,7 +30,7 @@ public class Main {
         // items[1]="Mirjalol"
         // 100
         // 0-99
-        System.out.println(hash(123456));
+        System.out.println(hash(123456)); */
 
         // HashTable
         // put(k,v)
@@ -40,13 +40,20 @@ public class Main {
         // Collisions: chaining
         // LinkedList<Entry>[]
         // [ LL, LL, LL, LL ]
+
+        HashTable table=new HashTable();
+        table.put(6,"A"); // 6/5=1
+        table.put(8,"B"); // 8/5=3
+        table.put(11,"B"); // 11/5=1
+        table.put(6,"A+");
+        System.out.println(table.get(6));
     }
 
     public static int hash(int number){
         return number % 100;
     }
 
-    public static void reverse(Queue<Integer>queue){
+    /*public static void reverse(Queue<Integer>queue){
         Stack<Integer>stack=new Stack<>();
         while (!queue.isEmpty())
             stack.push(queue.remove());
@@ -88,5 +95,5 @@ public class Main {
             System.out.println(queue.peek() + " ");
             queue.remove();
         }
-    }
+    }*/
 }
