@@ -84,4 +84,18 @@ public class Tree {
 
         return 1 + Math.max(height(root.leftChild), height(root.rightChild));
     }
+
+    public int min(){
+        return min(root);
+    }
+
+    private int min(Node root){
+        if (root.leftChild==null && root.rightChild==null)
+            return root.value;
+
+        var left=min(root.leftChild);
+        var right=min(root.rightChild);
+
+        return Math.min(Math.min(left,right), root.value);
+    }
 }

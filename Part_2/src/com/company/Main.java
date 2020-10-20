@@ -18,5 +18,6 @@ public class Main {
         tree.insert(8);
         tree.insert(10);
         System.out.println(tree.height());
+        System.out.println(tree.min());
     }
 }
