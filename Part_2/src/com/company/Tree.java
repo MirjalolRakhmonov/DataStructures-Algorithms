@@ -56,4 +56,18 @@ public class Tree {
         }
         return false;
     }
+
+    public void traversePreOrder(){
+        traversePreOrder(root);
+    }
+
+    private void traversePreOrder(Node root){
+        // Base condition, a moment we should stop going forward, we should go back
+        if (root==null)
+            return;
+
+        System.out.println(root.value);
+        traversePreOrder(root.leftChild);
+        traversePreOrder(root.rightChild);
+    }
 }
