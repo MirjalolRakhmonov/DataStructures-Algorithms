@@ -17,6 +17,6 @@ public class Main {
         tree.insert(6);
         tree.insert(8);
         tree.insert(10);
-        tree.traversePreOrder();
+        System.out.println(tree.height());
     }
 }
