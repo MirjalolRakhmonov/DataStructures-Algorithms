@@ -1,0 +1,11 @@
+Trees can be used in :
+* Represent hierarchial data
+* Databases
+* Autocompletion
+* Compilers
+* Compression (JPEG, MP3)
+Runtime complexity of tree methods :
+# Lookup O(log n)
+# Insert O(log n)
+# Delete O(log n)
+REMEMBER ! => left<parent<right
