@@ -17,7 +17,15 @@ public class Main {
         tree.insert(6);
         tree.insert(8);
         tree.insert(10);
-        System.out.println(tree.height());
-        System.out.println(tree.min());
+
+        var tree2=new Tree();
+        tree2.insert(7);
+        tree2.insert(4);
+        tree2.insert(9);
+        tree2.insert(1);
+        tree2.insert(6);
+        tree2.insert(8);
+        tree2.insert(10);
+        System.out.println(tree.equals(tree2));
     }
 }
