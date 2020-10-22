@@ -171,4 +171,15 @@ public class Tree {
                 System.out.println(value);
         }
     }
+
+    public int size() {
+        return size(root);
+    }
+
+    private int size(Node node) {
+        if (node==null)
+            return 0;
+
+        return (size(node.leftChild) + 1 + size(node.rightChild));
+    }
 }
