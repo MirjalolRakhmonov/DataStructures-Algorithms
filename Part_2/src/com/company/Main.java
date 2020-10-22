@@ -17,6 +17,8 @@ public class Main {
         tree.insert(6);
         tree.insert(8);
         tree.insert(10);
-        tree.printNodesAtDistance(0);
+        var list=tree.getNodesAtDistance(1);
+        for(var item : list)
+            System.out.println(item);
     }
 }
