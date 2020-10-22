@@ -182,4 +182,18 @@ public class Tree {
 
         return (size(node.leftChild) + 1 + size(node.rightChild));
     }
+
+    public int countLeaves() {
+        return countLeaves(root);
+    }
+
+    private int countLeaves(Node node) {
+        if (node==null)
+            return 0;
+
+        if (node.leftChild==null && node.rightChild==null)
+            return 1;
+
+        return countLeaves(node.leftChild)+countLeaves(node.rightChild);
+    }
 }
