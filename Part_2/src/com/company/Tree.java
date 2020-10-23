@@ -196,4 +196,27 @@ public class Tree {
 
         return countLeaves(node.leftChild)+countLeaves(node.rightChild);
     }
+
+    public int max() {
+        if (root==null)
+            throw new IllegalStateException();
+
+        var current=root;
+        var first=current;
+        while (current!=null) {
+            first=current;
+            current=current.rightChild;
+        }
+        return first.value;
+    }
+
+    private int max(Node node) {
+        if (node.leftChild==null && node.rightChild==null)
+            return node.value;
+
+        var left=max(node.leftChild);
+        var right=max(node.rightChild);
+
+        return Math.max(Math.max(left,right), node.value);
+    }
 }
