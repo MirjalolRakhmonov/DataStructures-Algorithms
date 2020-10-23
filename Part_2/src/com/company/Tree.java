@@ -219,4 +219,21 @@ public class Tree {
 
         return Math.max(Math.max(left,right), node.value);
     }
+
+    public boolean contains(int value) {
+        return contains(root, value);
+    }
+
+    private boolean contains(Node node, int value) {
+        var current=root;
+        while (current!=null) {
+            if (value<current.value)
+                current=current.leftChild;
+            else if (value>current.value)
+                current=current.rightChild;
+            else
+                return true;
+        }
+        return false;
+    }
 }
