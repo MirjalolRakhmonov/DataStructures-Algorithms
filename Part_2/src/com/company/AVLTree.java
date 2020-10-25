@@ -32,7 +32,7 @@ public class AVLTree {
 
         root.height=Math.max(height(root.left), height(root.right))+1;
 
-        var balanceFactor=height(root.left)-height(root.right);
+        var balanceFactor=balanceFactor(root);
         if (balanceFactor>1)
             System.out.println( root.value + " is left heavy");
         else if (balanceFactor<-1)
@@ -46,11 +46,11 @@ public class AVLTree {
     }
 
     private boolean isLeftHeavy(AVLNode node) {
-        return height(node.left)-height(node.right) > 1;
+        return balanceFactor(node) > 1;
     }
 
     private boolean isRightHeavy(AVLNode node) {
-        return height(node.left)-height(node.right)<-1;
+        return balanceFactor(node)<-1;
     }
 
     private int balanceFactor(AVLNode node) {
