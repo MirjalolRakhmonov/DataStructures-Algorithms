@@ -67,6 +67,17 @@ public class AVLTree {
         return (node==null) ? 0 : height(node.left)-height(node.right);
     }
 
+    public boolean isBalanced() {
+        if (node==null)
+            return true;
+
+        if (height(node.left)-height(node.right)<0
+        && height(node.right)-height(node.left)>0) {
+            return true;
+        }
+        return false;
+    }
+
     private AVLNode rotateLeft(AVLNode root) {
         var newRoot=root.right;
 
