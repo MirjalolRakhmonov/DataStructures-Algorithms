@@ -12,15 +12,16 @@ public class Heap {
         bubbleUp();
     }
 
-    public void remove() {
+    public int remove() {
         if (isEmpty())
             throw new IllegalStateException();
 
-        // move the value of last node to into the root node
+        var root=items[0];
         items[0]=items[size-1];
         size--;
 
         bubbleDown();
+        return root;
     }
 
     private void bubbleDown() {
