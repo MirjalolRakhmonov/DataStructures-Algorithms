@@ -20,9 +20,12 @@ public class Heap {
         items[0]=items[size-1];
         size--;
 
-        //execute bubble down algorithm item(root) < children
+        bubbleDown();
+    }
+
+    private void bubbleDown() {
         var index=0;
-        while (index<=size && !isValidIndex(index)) {
+        while (index<=size && !isValidParent(index)) {
             var largerChildIndex=largerChildIndex(index);
             swap(index, largerChildIndex);
             index=largerChildIndex;
@@ -30,13 +33,34 @@ public class Heap {
     }
 
     private int largerChildIndex(int index) {
-        return (leftChild(index) > rightChild(index) ?
-                leftChildIndex(index) : rightChildIndex(index));
+        if (!hasLeftChild(index))
+            return index;
+
+        if (!hasRightChild(index))
+            return leftChildIndex(index);
+
+        return (leftChild(index) > rightChild(index)) ?
+                leftChildIndex(index) : rightChildIndex(index);
     }
 
-    private boolean isValidIndex(int index) {
-        return items[index] >= leftChild(index)
-                && items[index] >= rightChild(index);
+    private boolean hasLeftChild(int index) {
+        return leftChildIndex(index)<=size;
+    }
+
+    private boolean hasRightChild(int index) {
+        return rightChildIndex(index)<=size;
+    }
+
+    private boolean isValidParent(int index) {
+        if (!hasLeftChild(index))
+            return true;
+
+        var isValid=items[index]>=leftChild(index);
+
+        if (hasRightChild(index))
+            isValid =isValid & items[index] >= rightChild(index);
+
+        return isValid;
     }
 
     private int rightChild(int index) {
