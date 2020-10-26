@@ -12,6 +12,33 @@ public class Heap {
         bubbleUp();
     }
 
+    public void remove() {
+        if (size==0)
+            throw new IllegalStateException();
+        // move the value of last node to into the root node
+        items[0]=items[size-1];
+        size--;
+
+        //execute bubble down algorithm item(root) < children
+        var index=0;
+        while (index<=size && items[index] < items[leftChildIndex(index)]
+                && items[index] < items[leftChildIndex(index)]) {
+            var largerChildIndex=(items[leftChildIndex(index)] > items[rightChildIndex(index)] ?
+                    leftChildIndex(index) : rightChildIndex(index);
+
+            swap(index, largerChildIndex);
+            index=largerChildIndex;
+        }
+    }
+
+    private int leftChildIndex(int index) {
+        return index * 2 + 1;
+    }
+
+    private int rightChildIndex(int index) {
+        return index * 2 + 2;
+    }
+
     private void bubbleUp() {
         var index=size-1;
         while (index>0 && items[index] > items[parent(index)]) {
